@@ -7,13 +7,10 @@
 #include "base26.cpp"
 #include "rsa.cpp"
 
-// TODO: добавить поддержку (?) адишионал дата блоакс
-
 // checksum and VersionNumber always set to 0
 
 // Activation Code
-// This is conditional, and if not used should be excluded from the header, rather than being set
-// to 0.
+// This is conditional, and if not used should be excluded from the header, rather than being set to 0.
 
 unsigned char *HeaderGen06(int dateOfIssue, int machineNumber, int transactionNumber, const char *issuingSystemId, int activationCode)
 {
@@ -163,5 +160,3 @@ int main()
 
     return 0;
 }
-
-// g++ main.cpp -lcrypto -o main
